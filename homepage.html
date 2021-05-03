@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---font links-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    
+    <!---font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <!--Bootstrap cdn-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!---Jquery Plugin-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    
+    <script src="js/jquery.min.js"></script>
+    <!---GSAP Plugin-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    
+    <!---Swiper JS-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
+    
+    <!---CSS Stylesheet-->
+    <link rel="stylesheet" href="css/homepage.css">
+    <title>Ahar Homepage</title>
+</head>
+
+<body>
+    <div class="container2">
+
+        <div class="grey bg_color"></div>
+        <div class="dark bg_color"></div>
+        <div class="yellow bg_color"></div>
+
+        <header>
+            <div class="logo" style=" font-size: 20px;">AHAR</div>
+            <div class="navigation">
+                <a href="#">GIVING IS THE GREATEST ACT OF GRACE <br></a>
+            </div>
+            <div class="menu">
+                <a href="#" style=" font-size: 20px;">About us</a>
+            </div>
+        </header>
+
+        <div class="content_wrapper">
+            <div class="item content_">
+
+                <div class="info_text">
+                    <p>Stay <span>Kind</span></p>
+                    <p>Stay <span>Humble</span></p>
+                </div>
+
+                <div class="slider_info">
+                   <div class="slider_text active" data-slider="0">
+                   <h1>Wanna provide?</h1>
+                    <p>
+                        1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci a praesentium iste id
+                        facere molestiae?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        
+                    </p>
+                    <div class="knowMore" style="margin-left: 150px;">
+                       <a href="">Join As Provider <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                    </div>
+                    <div class="slider_text" data-slider="1">
+                    <h1>Wanna collect?</h1>
+                    <p>
+                        2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci a praesentium iste id
+                        facere molestiae?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        
+                    </p>
+                    <div class="knowMore">
+                       <a href="">Join As Collector <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                    </div>
+                    <div class="slider_text" data-slider=2>
+                    <h1>Wanna donate?</h1>
+                    <p>
+                        3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci a praesentium iste id
+                        facere molestiae?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        
+                    </p>
+                    <div class="knowMore">
+                       <a href=""> Donate <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                    </div>
+
+                    <div class="pagination_">
+                        <div class="prev"><i class="fa fa-caret-left"></i></div>
+                        <div class="next"><i class="fa fa-caret-right"></i></div>
+                    </div>
+
+                    <div class="slider_indicator"></div>
+
+                </div>
+            </div>
+
+            <div class="item image_wrapper">
+
+                <div class="slider_image">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                </div>
+
+            </div>
+            <div class="img2">
+                <img src="img/plate.png">
+            </div>
+            
+
+        </div>
+    </div>
+
+    <script>
+        let swiper = new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: ".slider_indicator",
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: ".pagination_ .next",
+                prevEl: ".pagination_ .prev",
+            }
+        })
+
+        swiper.on('slideChange', function (swiper) {
+            let swiperIndex = (swiper.realIndex);
+            $(".slider_text").each(function (item) {
+                let textIndex = $(this).attr("data-slider");
+                if (textIndex == swiperIndex) {
+                    $(".slider_text").removeClass("active");
+                    $(this).addClass("active");
+                }
+            })
+        })
+
+        //gsap animation
+        let tl = gsap.timeline();
+        tl.from([".bg_color"], {
+            duraiton: 1.2,
+            y: -200,
+            height: 0,
+            ease: "power3.inOut",
+            stagger: {
+                amount: .5
+            }
+        })
+            .from([".logo", ".navigation", ".menu"], {
+                delay: -0.4,
+                y: -16,
+                opacity: 0,
+                ease: "power3.inOut",
+                stagger: {
+                    amount: .2
+                }
+            })
+            .from([".swiper-slide"], {
+                delay: -0.4,
+                x: -10,
+                opacity: 0,
+                duration: .8,
+                ease: "power3.out",
+                stagger: {
+                    amount: .2
+                }
+            })
+           .from([".img2"], {
+                delay: -0.4,
+                x: -10,
+                opacity: 0,
+                duration: .8,
+                ease: "power3.out",
+                stagger: {
+                    amount: .2
+                }
+            })
+            .from([".info_text p"], {
+                delay: -0.4,
+                y: 10,
+                opacity: 0,
+                duration: .8,
+                ease: "power3.out",
+                stagger: {
+                    amount: .2
+                }
+            })
+            .from([".slider_info", ".slider_info p"], {
+                delay: -0.4,
+                y: 10,
+                opacity: 0,
+                duration: .8,
+                ease: "power3.out",
+                stagger: {
+                    amount: .2
+                }
+            })
+            .from([".prev", ".next", ".knowMore", ".slider_indicator"], {
+                delay: -0.4,
+                x: -30,
+                opacity: 0,
+                duration: .8,
+                ease: "power3.out",
+                stagger: {
+                    amount: .2
+                }
+            })
+            .from([".social", ".social .fa"], {
+                delay: -0.4,
+                x: 30,
+                opacity: 0,
+                duration: .8,
+                ease: "power3.out",
+                stagger: {
+                    amount: .2
+                }
+            })
+        
+
+            //thank you for watching
+            //please subscribe my channel
+    </script>
+
+
+</body>
+
+</html>

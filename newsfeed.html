@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Horizontal Scroll</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/newsfeed.css" />
+    </head>
+    <body>
+       <div class="logo4">AHAR</div>
+        <div class="container">
+            <div class="block block-1">
+                <h1>Bashundhara</h1>
+                <img src="img/food1.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quod!</p>
+            </div>
+            <div class="block block-2">
+                <h1>Gulshan</h1>
+                <img src="img/food2.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, distinctio.</p>
+            </div>
+            <div class="block block-3">
+                <h1>Dhanmondi</h1>
+                <img src="img/food4.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, possimus.</p>
+            </div>
+            <div class="block block-4">
+                <h1>Uttara</h1>
+                <img src="img/food3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, dolores!</p>
+            </div>
+            <div class="block block-5">
+                <h1>Mirpur</h1>
+                <img src="img/food5.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, illum.</p>
+            </div>
+        </div>
+        <script src="js/newsfeed.js"></script>
+        <script>
+            var blocks = document.getElementsByClassName("block");
+            var container = document.getElementsByClassName("container");
+            var hs = new HorizontalScroll.default({
+                blocks: blocks,
+                container: container,
+                isAnimated: true,
+                springEffect: 0.8,
+            });
+        </script>
+    </body>
+</html>
